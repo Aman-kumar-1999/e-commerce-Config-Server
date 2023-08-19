@@ -1,0 +1,24 @@
+server:
+  port: 5001
+  
+  
+spring:
+  application:
+    name: CONFIG_SERVER
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Aman-kumar-1999/eqipped_test_micaroservice  # test
+#          uri: https://github.com/Aman-kumar-1999/eqipped-microservice-config # prod
+          clone-on-start: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://13.233.173.112:5000/eureka
+
